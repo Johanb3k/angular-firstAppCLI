@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  jour = 'lundi';
+  inputValue: string = ' ';
+
+  listeToDo: string[] = [];
+
+  createToDo(){
+    if(this.inputValue) {
+      this.listeToDo.push(this.inputValue);
+      this.inputValue = "";
+    }
+  }
 }
