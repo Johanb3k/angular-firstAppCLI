@@ -5,11 +5,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { GreetingPipe } from './greeting.pipe';
+import { MaleOnlyPipe } from './pipes-filtres/pipe-filtre';
+
+import { PipesFiltresComponent } from './pipes-filtres/pipes-filtres.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GreetingPipe
+    GreetingPipe,
+    PipesFiltresComponent,
+    MaleOnlyPipe
   ],
   imports: [
     BrowserModule,

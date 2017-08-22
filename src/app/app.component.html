@@ -32,4 +32,9 @@
     <h2>Utilisation des pipes</h2>
     <p>{{name | greeting:isMale}}, aujourd'hui nous sommes le : {{today | date:"dd/MM/yyyy"}}, il y a <strong>{{ listeToDo.length | i18nPlural: {'=0':'0 tâche', '=1':'1 tâche','other':'# tâches à effectuer'} }}</strong> dans la to-do liste.</p>
    </section>
+
+   <section>
+    <h2>Pipes filtres</h2>
+    <app-pipes-filtres></app-pipes-filtres>
+   </section>
 </main> 

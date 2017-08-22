@@ -22,4 +22,4 @@ export class AppComponent {
       this.inputValue = '';
     }
   }
-}
+} 
