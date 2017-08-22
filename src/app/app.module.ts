@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { GreetingPipe } from './greeting.pipe';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GreetingPipe
   ],
   imports: [
     BrowserModule,

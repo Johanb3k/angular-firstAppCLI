@@ -1,7 +1,6 @@
 <main>
   <h1>Première application avec Angular CLI</h1>
-  <p>Utilisation des bindings, des boucles, des if, des styles
-
+  <p>Utilisation des bindings, des boucles, des if, des styles</p>
 
    <section>
     <H2>Test du binding classique</H2>
@@ -17,10 +16,20 @@
     <h3>Liste de la todo</h3>
       <p *ngIf='listeToDo.length == 0'>Pas de résultats pour le moment</p>
       <ul [hidden]='listeToDo.length == 0'>
-        <li *ngFor='let toDo of listeToDo; let i = index; let last = last' [ngClass]="{'last':last}">
+        <li *ngFor='let toDo of listeToDo; let i = index; let last = last; let odd = odd' [ngClass]="{'last':last}" [ngStyle] = '{"background-color": !odd ? "#ccc" : ""}'>
           {{i+1}} - <a href="http://www.google.fr/#{{toDo}}">{{toDo}}</a>
           <span *ngIf=last> - Dernier résultat</span>
         </li>
       </ul>
+   </section>
+
+   <section>
+    <h2>Test de la condition if</h2>
+    <p>Est-ce que le jour choisi est lundi : <span *ngIf='jour == "lundi"'>Oui</span></p>
+   </section>
+
+   <section>
+    <h2>Utilisation des pipes</h2>
+    <p>{{name | greeting:isMale}}, aujourd'hui nous sommes le : {{today | date:"dd/MM/yyyy"}}, il y a <strong>{{ listeToDo.length | i18nPlural: {'=0':'0 tâche', '=1':'1 tâche','other':'# tâches à effectuer'} }}</strong> dans la to-do liste.</p>
    </section>
 </main> 
