@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 export class Personne {
   name: string;
@@ -9,6 +9,7 @@ export class Personne {
   selector: 'app-pipes-filtres',
   templateUrl: './pipes-filtres.component.html',
   styleUrls: ['./pipes-filtres.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 
 export class PipesFiltresComponent {

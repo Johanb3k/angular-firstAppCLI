@@ -11,6 +11,11 @@
     <h2>Test du binding "Two-ways"</h2>
     <form name="maListe" (submit)='createToDo()'>
       <input [(ngModel)]="inputValue" name="nom">
+      <p>
+        <input type="checkbox" name="CGV" id="cgv" [(ngModel)] = 'isChecked'>
+        <label for="cgv">{{label}}</label>
+      </p>
+      <p>CGV validées : <span *ngIf='isChecked == true'>oui</span><span *ngIf='isChecked == false'>non</span></p>
       <input type="submit" value="OK">
     </form>  
     <h3>Liste de la todo</h3>
@@ -34,7 +39,10 @@
    </section>
 
    <section>
-    <h2>Pipes filtres</h2>
     <app-pipes-filtres></app-pipes-filtres>
+   </section>
+
+   <section>
+    <app-inputs [texte]="toDoTest" [isChecked]="toDoChecked"></app-inputs>
    </section>
 </main> 
