@@ -1,5 +1,7 @@
 <h2>Utilisation des inputs</h2>
 <form name="testInputs">
-<input type="checkbox" id="cgvInputs" [(ngModel)] = 'isChecked' name="cgvInputs">
-<label for="cgvInputs">{{texte}}</label>
+  <input type="checkbox" id="cgvInputs" [(ngModel)] = 'isChecked' name="cgvInputs">
+  <label for="cgvInputs">{{texte}}</label>
 </form>
+<p *ngIf='isChecked'>Ai-je validé les CGV? Oui!</p>
+<p *ngIf='!isChecked'>Ai-je validé les CGV? Non!</p>

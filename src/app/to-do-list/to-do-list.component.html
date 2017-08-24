@@ -1,0 +1,8 @@
+<h2>Utilisation des inputs dynamiques</h2>
+<form>
+  <input type="text" placeholder="Entrer un éléments" [(ngModel)]="newToDoText" name="element">
+  <button (click)="addElt()">Ajouter l'élément à la liste</button>
+  <ul>
+    <app-list-element *ngFor="let todo of toDoList" [toDoList]="todo"></app-list-element>
+  </ul>
+</form>
