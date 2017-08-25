@@ -11,6 +11,8 @@ import { PipesFiltresComponent } from './pipes-filtres/pipes-filtres.component';
 import { InputsComponent } from './inputs/inputs.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { ListElementComponent } from './to-do-list/list-element/list-element.component';
+import { ListeCoursesComponent } from './liste-courses/liste-courses.component';
+import { ArticleComponent } from './liste-courses/article/article.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ListElementComponent } from './to-do-list/list-element/list-element.com
     MaleOnlyPipe,
     InputsComponent,
     ToDoListComponent,
-    ListElementComponent
+    ListElementComponent,
+    ListeCoursesComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,

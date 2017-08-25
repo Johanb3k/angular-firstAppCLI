@@ -2,7 +2,10 @@
 <form>
   <input type="text" placeholder="Entrer un éléments" [(ngModel)]="newToDoText" name="element">
   <button (click)="addElt()">Ajouter l'élément à la liste</button>
-  <ul>
-    <app-list-element *ngFor="let todo of toDoList" [toDoList]="todo"></app-list-element>
+  <ul *ngIf="toDoList != ''; else elseBlock">
+    <app-list-element *ngFor="let todo of toDoList" [myToDoList]="todo" (deleteTriggered)="removeElt($event)"></app-list-element>
   </ul>
+  <ng-template #elseBlock>
+    <p>Pas de résultats pour le moment</p>
+  </ng-template>
 </form>

@@ -1,0 +1,5 @@
+<li>
+    {{article.text}}
+    <input type="checkbox" [checked]='article.isChecked' (click)="selectArticle()">
+    <button (click)="deleteArticle()">X</button>
+</li>

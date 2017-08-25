@@ -1,0 +1,14 @@
+<h2>Ma liste de courses</h2>
+
+<form>
+  <label for="article">Je saisis mon article à acheter :</label>
+  <input id="article" type="text" [(ngModel)]='inputArticles' name="article" />
+  <button (click)='addProduct()'>Ajouter</button>
+</form>
+
+<p>Ma liste d'articles à acheter</p>
+<ul>
+  <app-article *ngFor='let article of listeArticles' [article]='article' (triggerDeleted)='deleteArticle($event)' (triggerSelected)='articleSelected($event)'></app-article>
+</ul>
+<p>Nombre d'articles sélectionnés : {{nbArticlesChecked}}</p>
+<button (click)='totalProduits()'>Acheter mes articles</button>
