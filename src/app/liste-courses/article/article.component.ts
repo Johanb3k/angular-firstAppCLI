@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { ArrayModel } from 'app/liste-courses/array-model';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  styleUrls: ['./article.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ArticleComponent implements OnInit {
 
@@ -20,14 +21,14 @@ export class ArticleComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("On charge un article");
+    console.log('On charge un article');
   }
 
-  deleteArticle(){
+  deleteArticle() {
     this.triggerDeleted.emit(this.article);
   }
 
-  selectArticle(){
+  selectArticle() {
     this.triggerSelected.emit(this.article);
   }
 }
